@@ -1,8 +1,6 @@
-
 /*
-    Datos del Estudiante
-    Nombre Completo : Tumiri Huanca Alex
-    Asignatura : SIS-104 (Desarrollo de Aplicaciones Moviles)
+  * @Author : Pragmatic Coder
+  * @Repositorio : https://github.com/Zelechos/DS_Data_Structure
 */
 
 package ListasEnlazadas;
@@ -13,12 +11,16 @@ public class ListaEnlazada {
     private int Longitud = 0;
     
     private class Nodo{
+        
         public int Numero;
+        
         public Nodo Siguiente = null;
         
+        //Constructor para el Nodo Final
         public Nodo(int Numero){
             this.Numero = Numero;
         }
+        
     }
     
     public void InsertarPrincipio(int Numero){

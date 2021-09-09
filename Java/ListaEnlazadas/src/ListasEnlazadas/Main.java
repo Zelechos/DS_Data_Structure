@@ -1,8 +1,7 @@
 /*
-    Datos del Estudiante
-    Nombre Completo : Tumiri Huanca Alex
-    Asignatura : SIS-104 (Desarrollo de Aplicaciones Moviles)
-*/
+  * @Author : Pragmatic Coder
+  * @Repositorio : https://github.com/Zelechos/DS_Data_Structure
+ */
 package ListasEnlazadas;
 
 import javax.swing.JOptionPane;
@@ -11,10 +10,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        
         ListaEnlazada lista = new ListaEnlazada();
-        
-        
+
         int Opcion = 0, elemento, posicion;
 
         do {
@@ -44,9 +41,10 @@ public class Main {
                     } catch (NumberFormatException ex) {
                         JOptionPane.showMessageDialog(null, "No Introdujo un Numero . . .  ERROR" + ex.getMessage());
                     } finally {
-
                     }
+
                     break;
+                    
                     case 2:
                         try {
 
@@ -58,43 +56,42 @@ public class Main {
                     } finally {
 
                     }
-                        break;
-                        
+                    break;
+
                     case 3:
                         elemento = Integer.parseInt(JOptionPane.showInputDialog("Digite el Numero a insertar : "));
                         posicion = Integer.parseInt(JOptionPane.showInputDialog("Digite la posicion donde insertar : "));
-                        
+
                         lista.InsertarDespues(posicion, elemento);
-                        
-    
+
                         break;
-                        
+
                     case 4:
-                        System.out.println("La Cantidad de elementos en la Lista Enlazada es : "+lista.Cantidad());
+                        System.out.println("La Cantidad de elementos en la Lista Enlazada es : " + lista.Cantidad());
                         break;
-                        
+
                     case 5:
-                        if (lista.Vacio() == true){
+                        if (lista.Vacio() == true) {
                             System.out.println("La Lista Enlazada esta Vacia");
-                        }else{
+                        } else {
                             System.out.println("La Lista Enlazada tiene elementos");
                         }
-                        
+
                         break;
-                    case 6: 
+                    case 6:
                         lista.EliminarPrincipio();
                         break;
-                    case 7: 
+                    case 7:
                         lista.EliminarFinal();
                         break;
-                    case 8:                         
+                    case 8:
                         elemento = Integer.parseInt(JOptionPane.showInputDialog("Digite la posicion de la Lista que desea Eliminar : "));
                         lista.EliminarNumero(elemento);
                         break;
                     case 9:
                         lista.MostrarLista();
                         break;
-                    
+
                     case 10:
                         JOptionPane.showMessageDialog(null, "Fin del Programa");
                         System.exit(0);
@@ -114,9 +111,4 @@ public class Main {
         } while (Opcion != 10);
     }
 
-        
-        
-        
-        
 }
-    
