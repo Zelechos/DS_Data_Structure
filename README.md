@@ -35,6 +35,7 @@
 > Quieres contribuir y no sabes por donde empezar?? aqui te dejamos un listado de pasos a seguir para trabajar en el repositorio
 
 + Pasos de Como contribuir
+    * Tienes que Seguirme en [@Zelechos](https://github.com/Zelechos)
     * Dale una estrella al Repositorio!!! (Muyyyyyyy Importanteeee)
     * Clona la issue con las siguientes especificaciones !! [[issue de ejemplo]](https://github.com/Zelechos/DS_Data_Structure/issues/1)
     * Manda la issue clonada y modificada con tus especificaciones sobre como contribuiras (y espera el mensaje de aprobacion del creador).
@@ -43,4 +44,6 @@
     * Trabaja en tu rama personalizada
     * Manda tu Pull Request para las revisiones
     * Una vez tus cambios se aprueben se realizara el Merge!!!
+
+#### Feliz Contribucion!!!!
 
