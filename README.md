@@ -10,6 +10,8 @@
 
 + Estructuras de Datos
     * Array
+    * Busquedas
+    * Algoritmos de Ordenamiento
     * Lista Enlazada
     * Tablas de Hash
     * Pilas
@@ -17,6 +19,14 @@
     * Grafos
     * Arboles
     * Heaps
+    * Complejidad Computacional
+    * Problemas sin solucion
+    * Modelos y Simulaciones
+    * Principios del buen diseño
+    * Recursividad
+    * Ncurses
+    * Estructuras y encapsulacion
+    * Ordenamiento por mezcla
 
 ### Lenguajes en los que se realizaran los ejemplos son : 
 
