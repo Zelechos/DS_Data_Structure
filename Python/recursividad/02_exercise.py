@@ -1,47 +1,45 @@
-# ---------------------- Ejercicio 2 ---------------------- 
+# ---------------------- Ejercicio 2 ----------------------
 
-# Mostrar la siguiente sucesion de Numeros  S = 3+6+4+7+5+8 .. etc para n Numeros y mostrar el Resultado (Aplicando Recursividad)
+# Mostrar la siguiente sucesion de numeros  S = 3+6+4+7+5+8 .. etc para n numeros y mostrar el Resultado (Aplicando Recursividad)
 
-Numero = int(input("Digita la Cantidad de Numeros que sumara : "))
+number = int(input("Digita la Cantidad de numbers a sumar : "))
 
-NumeroInicial = 3             
-Respuesta = 3
-Switch = 0
-Suma = 0
 
-def Mostrador(Numero, NumeroInicial , Respuesta , Switch , Suma):#respetar el orden al llamar los argumento en la recusividad
-    if Numero > 0:
-        
-        if Switch == 0:
-            
-            if Numero != 1:
-                print (Respuesta, end=" + ")
-            else : 
-                print(Respuesta, end =" = ")
-                
-            Suma +=Respuesta
-            Respuesta+=NumeroInicial
-            NumeroInicial-=1
-            Switch+=1
-            
-            return Mostrador(Numero-1 , NumeroInicial , Respuesta , Switch , Suma)#Aplicando Recusividad
-        
-        else:
-            
-            if Numero != 1:
-                print (Respuesta, end=" + ")
+def show_sequence(
+    number, initial_number, response, addition, switch
+):  # respetar el orden al llamar los argumento en la recusividad
+    if number > 0:
+        if switch:
+
+            if number != 1:
+                print(response, end=" + ")
             else:
-                print(Respuesta,end=" = ")
-                
-            Suma +=Respuesta
-            Respuesta-=NumeroInicial
-            NumeroInicial+=1
-            Switch-=1
-            
-            return Mostrador(Numero-1 , NumeroInicial , Respuesta , Switch ,Suma)#Aplicando Recursividad
-        
-    return Suma
+                print(response, end=" = ")
+            addition += response
+            response += initial_number
+            initial_number -= 1
+            switch = False
 
-print(Mostrador(Numero, NumeroInicial ,Respuesta ,Switch,Suma))
-print("Fin del Programa . . .")                      
+            return show_sequence(
+                number - 1, initial_number, response, addition, switch
+            )  # Aplicando Recusividad
 
+        else:
+            if number != 1:
+                print(response, end=" + ")
+            else:
+                print(response, end=" = ")
+            addition += response
+            response -= initial_number
+            initial_number += 1
+            switch = True
+
+            return show_sequence(
+                number - 1, initial_number, response, addition, switch
+            )  # Aplicando Recursividad
+
+    return addition
+
+
+print(show_sequence(number, initial_number=3, response=3, addition=0, switch=True))
+print("Fin del Programa . . .")
