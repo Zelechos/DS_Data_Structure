@@ -5,6 +5,8 @@
 
 package ListasEnlazadas;
 
+import javax.swing.*;
+
 public class ListaEnlazada {
 
     private Nodo Cabeza = null;
@@ -127,13 +129,12 @@ public class ListaEnlazada {
     
     public void MostrarLista(){
         Nodo puntero = Cabeza;
-         
+        StringBuilder text = new StringBuilder();
         while(puntero != null){
-            System.out.print("[" + puntero.Numero + "]->");
+            text.append("[" + puntero.Numero + "]->");
             puntero = puntero.Siguiente;
         }
-        
-        System.out.println("");
+        JOptionPane.showMessageDialog(null, text);
     }
     
 }

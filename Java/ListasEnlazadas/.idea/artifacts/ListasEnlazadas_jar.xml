@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ListasEnlazadas:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ListasEnlazadas_jar</output-path>
+    <root id="archive" name="ListasEnlazadas.jar">
+      <element id="module-output" name="ListasEnlazadas" />
+    </root>
+  </artifact>
+</component>

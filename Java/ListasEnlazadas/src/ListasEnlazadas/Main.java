@@ -4,7 +4,7 @@
  */
 package ListasEnlazadas;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 public class Main {
 
@@ -41,9 +41,11 @@ public class Main {
                     } catch (NumberFormatException ex) {
                         JOptionPane.showMessageDialog(null, "No Introdujo un Numero . . .  ERROR" + ex.getMessage());
                     } finally {
+                        lista.MostrarLista();
                     }
 
-                    break;
+
+                        break;
                     
                     case 2:
                         try {
@@ -54,7 +56,7 @@ public class Main {
                     } catch (NumberFormatException ex) {
                         JOptionPane.showMessageDialog(null, "No Introdujo un Numero . . .  ERROR" + ex.getMessage());
                     } finally {
-
+                        lista.MostrarLista();
                     }
                     break;
 
@@ -63,30 +65,33 @@ public class Main {
                         posicion = Integer.parseInt(JOptionPane.showInputDialog("Digite la posicion donde insertar : "));
 
                         lista.InsertarDespues(posicion, elemento);
-
+                        lista.MostrarLista();
                         break;
 
                     case 4:
-                        System.out.println("La Cantidad de elementos en la Lista Enlazada es : " + lista.Cantidad());
+                        JOptionPane.showMessageDialog(null, "La Cantidad de elementos en la Lista Enlazada es : " + lista.Cantidad());
                         break;
 
                     case 5:
                         if (lista.Vacio() == true) {
-                            System.out.println("La Lista Enlazada esta Vacia");
+                            JOptionPane.showMessageDialog(null, "La Lista Enlazada esta Vacia");
                         } else {
-                            System.out.println("La Lista Enlazada tiene elementos");
+                            JOptionPane.showMessageDialog(null, "La Lista Enlazada tiene elementos");
                         }
 
                         break;
                     case 6:
                         lista.EliminarPrincipio();
+                        lista.MostrarLista();
                         break;
                     case 7:
                         lista.EliminarFinal();
+                        lista.MostrarLista();
                         break;
                     case 8:
                         elemento = Integer.parseInt(JOptionPane.showInputDialog("Digite la posicion de la Lista que desea Eliminar : "));
                         lista.EliminarNumero(elemento);
+                        lista.MostrarLista();
                         break;
                     case 9:
                         lista.MostrarLista();
