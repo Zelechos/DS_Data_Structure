@@ -1,12 +1,14 @@
 # Tipos de Datos Abstractos (TDA)
--------------
 
-#### En ciencias de la computacion un ***Tipo de Dato Abstracto(TDA)*** o ***Tipo Abstracto de Datos(TAD)*** es un modelo matematico compuesto por una coleccion de operaciones definidas sobre un conjunto de datos para el modelo.
+---
+
+#### En ciencias de la computacion un **_Tipo de Dato Abstracto(TDA)_** o **_Tipo Abstracto de Datos(TAD)_** es un modelo matematico compuesto por una coleccion de operaciones definidas sobre un conjunto de datos para el modelo.
 
 - **TDA:** para la definición y representación de tipos de datos (valores + operaciones), junto con sus propiedades.
 - **Objetos:** Son TDA a los que se añade propiedades de reutilización y de compartición de código.
 
-##### Un TDA tambien puede definirse mediante la ecuacion : 
+##### Un TDA tambien puede definirse mediante la ecuacion :
+
 ```
 TDA = Representacion(Datos) + Operaciones(Metodos)
 ```
@@ -14,72 +16,76 @@ TDA = Representacion(Datos) + Operaciones(Metodos)
 ### Ejemplos de TDA en Java
 
 clase **point.java** que sera nuestro TDA para este ejemplo.
+
 ```java
 /*
- * @Author : Pragmatic Coder
+ * @Author : Alex T.H.
  * @Repositorio : https://github.com/Zelechos/DS_Data_Structure
  */
 package TDA;
 
 // La clase point es nuestro TDA
-public class point {
-    
-    private int x, y, z;
-    String dimension;
-    
-    
-    public point(int coordinateX, int coordinateY){
-        this.x = coordinateX;
-        this.y = coordinateY;
-    }
-    
-    public point(int coordinateX, int coordinateY, int coordinateZ){
-        this.x = coordinateX;
-        this.y = coordinateY;
-        this.z = coordinateZ;
-    }
-    
-    public point(){
-        this.x = 0;
-        this.y = 0;
+public class Point {
+
+    private int coordinateX, coordinateY, coordinateZ;
+    private String dimension;
+
+
+    public Point(int coordinateX, int coordinateY){
+        this.coordinateX = coordinateX;
+        this.coordinateY = coordinateY;
     }
 
-    public int getX() {
-        return x;
+    public Point(int coordinateX, int coordinateY, int coordinateZ){
+        this.coordinateX = coordinateX;
+        this.coordinateY = coordinateY;
+        this.coordinateZ = coordinateZ;
     }
 
-    public int getY() {
-        return y;
+    public Point(){
+        this.coordinateX = 0;
+        this.coordinateY = 0;
     }
 
-    public int getZ() {
-        return z;
+    public int getCoordinateX() {
+        return coordinateX;
+    }
+
+    public int getCoordinateY() {
+        return coordinateX;
+    }
+
+    public int getCoordinateZ() {
+        return coordinateZ;
     }
 
     public String getDimension(){
         return  dimension;
     }
-    
-    public void setX(int x) {
-        this.x = x;
+
+    public void setCoordinateX(int coordinateX) {
+        this.coordinateX = coordinateX;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public void setCoordinateY(int coordinateY) {
+        this.coordinateY = coordinateY;
     }
 
-    public void setZ(int z) {
-        this.z = z;
+    public void setCoordinateZ(int coordinateZ) {
+        this.coordinateZ = coordinateZ;
     }
-    
+
+
     public void setDimension(String dimension){
         this.dimension = dimension;
     }
-        
+
 }
 
 ```
+
 y tambien tenemos nuestra clase **main.java**
+
 ```java
 /*
  * @Author : Pragmatic Coder
@@ -90,24 +96,24 @@ package TDA;
 public class main {
 
     public static void main(String[] args) {
-        
+
 //        Instanciamos nuestro TDA es que el point
-        point instance = new point();
-        instance.setX(9);
-        instance.setY(99);
-        instance.setZ(999);
+        Point instance = new Point();
+        instance.setCoordinateX(9);
+        instance.setCoordinateY(99);
+        instance.setCoordinateZ(999);
         instance.setDimension("3D");
-        System.out.println("Dimension : "+instance.getDimension());
-        System.out.println("Coordinate X: "+instance.getX());
-        System.out.println("Coordinate Y: "+instance.getY());
-        System.out.println("Coordinate Z: "+instance.getZ());
-        
+        System.out.println("Dimension : " + instance.getDimension());
+        System.out.println("Coordinate X: " + instance.getCoordinateX());
+        System.out.println("Coordinate Y: " + instance.getCoordinateY());
+        System.out.println("Coordinate Z: " + instance.getCoordinateZ());
+
     }
-    
+
 }
 ```
 
-Un TDA está caracterizado por un conjunto de operaciones (funciones) al cual se denomina usualmente como interfaz pública y representa el comportamiento del TDA; mientras que la implementación como la parte privada del TDA está oculta al programa cliente que lo usa. Todos los lenguajes de alto nivel tienen predefinidos TDA; que son los tipos denominados simples y las estructuras predefinidas, y estos tienen sus interfaces públicas que incluyen las operaciones como la +, -, *, etc.
+Un TDA está caracterizado por un conjunto de operaciones (funciones) al cual se denomina usualmente como interfaz pública y representa el comportamiento del TDA; mientras que la implementación como la parte privada del TDA está oculta al programa cliente que lo usa. Todos los lenguajes de alto nivel tienen predefinidos TDA; que son los tipos denominados simples y las estructuras predefinidas, y estos tienen sus interfaces públicas que incluyen las operaciones como la +, -, \*, etc.
 
 No se necesita conocer como actúan tales operadores sobre la representación interna de los tipos definidos, que además, suele ser una implementación bastante dependiente de la máquina sobre la que trabaje el compilador. Lo interesante es que los lenguajes actuales nos van a permitir ampliar los TDA predefinidos con otros que serán definidos por el propio programador para adecuar así los tipos de datos a las necesidades de los programas.
 
