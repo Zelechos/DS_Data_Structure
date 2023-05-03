@@ -1,6 +1,8 @@
 # Tipos de Datos Abstractos (TDA)
 
----
+### By Alex T.H.
+
+<img align="center" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt="javascript" width="1000"/>
 
 #### En ciencias de la computacion un **_Tipo de Dato Abstracto(TDA)_** o **_Tipo Abstracto de Datos(TAD)_** es un modelo matematico compuesto por una coleccion de operaciones definidas sobre un conjunto de datos para el modelo.
 
