@@ -1,7 +1,5 @@
 package arrays;
 
-import java.util.Arrays;
-
 public class TestMainArray {
     public static void main(String[] args) {
         System.out.println("Welcome to Arrays package!");
